@@ -1,0 +1,17 @@
+.menubar {
+    color: #F9FCFF;
+    background-color: #323539;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 42px;
+}
+
+.menuitem {
+    color: orange;
+    padding: 5px;
+    margin: 5px;
+    border: #F9FCFF;
+    float: left;
+}
