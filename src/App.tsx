@@ -7,9 +7,10 @@ import HomePage from './pages/HomePage';
 import Anime from './pages/Anime';
 import Manga from './pages/Manga';
 import MenuBar from './components/MenuBar';
+import SearchAnime from './pages/SearchAnime';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/movies" element={<Movies />} />
           <Route path="/tvshows" element={<TVShows />} />
           <Route path="/anime" element={<Anime />} />
+          <Route path="/searchAnime" element={<SearchAnime/>} />
           <Route path="/manga" element={<Manga />} />
           <Route path="/books" element={<Books />} />
       </Routes>

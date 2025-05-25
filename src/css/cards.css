@@ -1,0 +1,35 @@
+.anime-card-group {
+    justify-content: center;
+}
+
+.anime-card-grid, .anime-card {
+    padding: 5px 5px !important;
+    height: auto !important;
+    justify-content: center;
+    /* margin: 1rem; */
+}
+
+.anime-card-body {
+    background-color: #F6F5F5;
+    margin: 0;
+}
+
+.anime-card-img,
+.anime-card-img-top,
+.anime-card-img-bottom {
+    height: 20rem;
+    width: 14rem;
+    align-content: flex-start;
+}
+
+.anime-card-text {
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+
+.btn, .btn-primary {
+    position: absolute;
+    bottom: 5px;
+    color: #263238;
+    overflow: auto;
+}

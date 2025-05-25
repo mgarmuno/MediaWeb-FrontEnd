@@ -2,10 +2,14 @@
     color: #F9FCFF;
     background-color: #323539;
     position: fixed;
-    top: 0;
-    width: 100%;
-    max-width: 100%;
+    top: 2em;
+    width: 90%;
+    max-width: 92%;
     height: 42px;
+    display: flex;
+    justify-content: center;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 .menuitem {

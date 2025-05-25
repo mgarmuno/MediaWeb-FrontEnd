@@ -1,4 +1,18 @@
-h1 {
-    margin: 4%;
+.main-component-div {
+    background-color: #1D1F22;
     color: #F9FCFF;
+    margin: 5em;
+    margin-top: 7em;
+    top: 5em;
+        display: flex;
+    justify-content: center;
+}
+
+.content {
+    margin: 8%;
+}
+
+.pageHeader {
+    margin-top: 5%;
+    margin-left: 30%;
 }
