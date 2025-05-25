@@ -7,7 +7,6 @@ function AnimeDetails() {
 
     return (
         <div className="main-component-div">
-            <
             <img src={anime.image} />
         </div>
     )
