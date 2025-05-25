@@ -11,6 +11,7 @@ import SearchAnime from './pages/SearchAnime';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import AnimeDetails from './pages/AnimeDetails';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/tvshows" element={<TVShows />} />
           <Route path="/anime" element={<Anime />} />
           <Route path="/searchAnime" element={<SearchAnime/>} />
+          <Route path="/animeDetails" element={<AnimeDetails/>} />
           <Route path="/manga" element={<Manga />} />
           <Route path="/books" element={<Books />} />
       </Routes>

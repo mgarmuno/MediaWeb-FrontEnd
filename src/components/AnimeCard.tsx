@@ -10,8 +10,8 @@ function AnimeCard({ anime } : IProps) {
     const navigate = useNavigate();
 
     const handleCardClick = () => {
-        const data = {anime}
-        navigate('/animeDetails', {state:data});
+        const data = anime
+        navigate('/animeDetails', {state:{data: anime}});
     };
 
     return (
