@@ -6,11 +6,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import '../css/cards.css'
 import AnimeCard from "../components/AnimeCard";
 
-export interface ACard {
+export interface Anime {
     id: string;
-    english: string
-    romaji: string
-    native: string
+    english: string;
+    romaji: string;
+    native: string;
+    description: string;
     image: string;
     episodes: number;
     isAdult: boolean;
@@ -41,7 +42,7 @@ function SearchAnime() {
         }
         axios.get('http://localhost:8080/api/anime/search', { params })
             .then(response => {
-                const data: ACard[] = response.data;
+                const data: Anime[] = response.data;
                 navigate("/searchAnime", {state: {data: data}});
             })
     };
@@ -61,7 +62,7 @@ function SearchAnime() {
             <div>
                 <Container className="mt-4">
                     <Row className="g-4">
-                        {animes ? animes.map((anime: ACard, index : number) => (
+                        {animes ? animes.map((anime: Anime, index : number) => (
                             <Col key={index} xs={12} sm={6} md={4} lg={3}>
                                 <AnimeCard anime={anime} />
                             </Col>

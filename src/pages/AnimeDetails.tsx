@@ -1,14 +1,74 @@
 import { useLocation } from "react-router-dom";
-import { ACard } from "./SearchAnime";
+import { Anime } from "./SearchAnime";
+
+import '../css/anime-details.css'
 
 function AnimeDetails() {
     const location = useLocation();
-    const anime : ACard = location.state?.data;
+    const anime : Anime = location.state?.data;
 
     return (
-        <div className="main-component-div">
-            <img src={anime.image} />
+        <>
+        <div className="movie_card" id="bright">
+            <div className="info_section">
+                <div className="movie_header">
+                    <img className="locandina" src={anime.image} />
+                    <h1>{anime.english ? anime.english : anime.romaji ? anime.romaji : anime.native}</h1>
+                    <h4>{anime.seasonYear ? anime.seasonYear : "No info year"}, David Ayer</h4>
+                    <span className="minutes">{anime.</span>
+                    <span className="minutes">{anime.episodes ? anime.episodes + " episodes" : ""}</span>
+                    <div>
+                        <span className="text">English title: {anime.english}</span><br></br>
+                        <span className="text">Romaji title:  {anime.romaji}</span><br></br>
+                        <span className="text">Native title:  {anime.native}</span>
+                    </div>
+                </div>
+                <div className="movie_desc">
+                    <p className="text">
+                        {anime.description}
+                    </p>
+                    <p className="text">{anime.genres.join(", ")}</p>
+                </div>
+                <div className="movie_social">
+                    
+                </div>
+            </div>
+            <div className="blur_back bright_back"></div>
         </div>
+        <div>
+            <button>Add Anime</button>
+        </div>
+
+
+</>
+
+
+
+        // <div className="main-component-div anime-details">
+        //     <div>
+        //         <h1>{anime.english ? anime.english : anime.romaji ? anime.romaji : anime.native}</h1>
+        //     </div><br></br>
+        //     <div>
+        //     <img src={anime.image} />
+        //     </div><br />
+        //     <div>
+        //     <label>
+        //         English
+        //     <div>
+        //         <label>{anime.english}</label>
+        //     </div>
+        //     </label>
+        //     </div>
+        //      <label>
+        //         Romaji
+        //         <label>{anime.romaji}</label>
+        //     </label>
+        //      <label>
+        //         Native
+        //         <label>{anime.native}</label>
+        //     </label>
+        //     <p>{anime.description}</p>
+        // </div>
     )
 }
 

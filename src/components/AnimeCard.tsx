@@ -1,9 +1,9 @@
 import { Card } from "react-bootstrap";
-import { ACard } from "../pages/SearchAnime";
+import { Anime } from "../pages/SearchAnime";
 import { useNavigate } from 'react-router-dom';
 
 interface IProps {
-    anime: ACard
+    anime: Anime
 }
 
 function AnimeCard({ anime } : IProps) {
@@ -18,7 +18,7 @@ function AnimeCard({ anime } : IProps) {
         <>
         <Card className="anime-card-grid" onClick={handleCardClick}>
             <Card.Img variant="top" src={anime.image}/>
-            <Card.Title>{anime.english}</Card.Title>
+            <Card.Title>{anime.english ? anime.english : anime.romaji ? anime.romaji : anime.native}</Card.Title>
         </Card>
         </>
     );
