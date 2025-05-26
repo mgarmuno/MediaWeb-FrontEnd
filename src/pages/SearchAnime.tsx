@@ -7,24 +7,35 @@ import '../css/cards.css'
 import AnimeCard from "../components/AnimeCard";
 
 export interface Anime {
-    id: string;
-    english: string;
-    romaji: string;
-    native: string;
-    description: string;
-    image: string;
-    episodes: number;
-    isAdult: boolean;
-    season: string;
-    seasonYear: number;
-    averageScore: number;
-    duration: number;
-    genres: string[];
+  id: number
+  title: Title
+  coverImage: CoverImage
+  duration: number
+  bannerImage?: string
+  description: string
+  averageScore?: number
+  episodes: number
+  season: string
+  seasonYear: number
+  isAdult: boolean
+  format: string
+  genres: string[]
 }
+
+export interface Title {
+  romaji: string
+  english?: string
+  native: string
+}
+
+export interface CoverImage {
+  large: string
+}
+
 
 function SearchAnime() {
     const location = useLocation();
-    const animes = location.state?.data;
+    const animes = location.state?.data.data.Page.media;
     const navigate = useNavigate()
 
     const [values, setFormData] = useState({

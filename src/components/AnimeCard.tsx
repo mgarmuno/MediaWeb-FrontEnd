@@ -17,8 +17,8 @@ function AnimeCard({ anime } : IProps) {
     return (
         <>
         <Card className="anime-card-grid" onClick={handleCardClick}>
-            <Card.Img variant="top" src={anime.image}/>
-            <Card.Title>{anime.english ? anime.english : anime.romaji ? anime.romaji : anime.native}</Card.Title>
+            <Card.Img variant="top" src={anime.coverImage.large}/>
+            <Card.Title>{anime.title.english ? anime.title.english : anime.title.romaji ? anime.title.romaji : anime.title.native}</Card.Title>
         </Card>
         </>
     );
