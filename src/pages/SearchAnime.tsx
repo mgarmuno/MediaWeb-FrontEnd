@@ -18,6 +18,7 @@ export interface Anime {
     season: string;
     seasonYear: number;
     averageScore: number;
+    duration: number;
     genres: string[];
 }
 

@@ -15,7 +15,7 @@ function AnimeDetails() {
                     <img className="locandina" src={anime.image} />
                     <h1>{anime.english ? anime.english : anime.romaji ? anime.romaji : anime.native}</h1>
                     <h4>{anime.seasonYear ? anime.seasonYear : "No info year"}, David Ayer</h4>
-                    <span className="minutes">{anime.</span>
+                    <span className="minutes">{anime.duration}</span>
                     <span className="minutes">{anime.episodes ? anime.episodes + " episodes" : ""}</span>
                     <div>
                         <span className="text">English title: {anime.english}</span><br></br>
